@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewBackgroundBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="Display image for banner background" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_background_banner"/>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/imageViewBanner"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Display avatar image for banner" />
+
+        <TextView
+            android:id="@+id/textViewTitleBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/imageViewBanner"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="Hai con thằn lằn con"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/textViewContentBanner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Chào bạn đến với ca khúc tuyện vời nhất Vịnh Bắc Bộ"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            app:layout_constraintLeft_toRightOf="@+id/imageViewBanner"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitleBanner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

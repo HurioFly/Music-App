@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MusicPlayerActivity"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="@drawable/custom_background_music_player">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMusicPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Hai con thằn lằn con"
+        app:subtitle="Sơn Tùng MTP"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="#A2A7A3"
+        android:backgroundTint="@color/white"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPagerMusicPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/circleIndicatorMusicPlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            app:ci_drawable="@drawable/custom_circleindicator_selected"
+            app:ci_drawable_unselected="@drawable/custom_circleindicator_unselected"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textViewTimeSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <SeekBar
+                android:id="@+id/seekBarSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:progressBackgroundTint="@color/white"
+                android:progressTint="#8947AD"
+                android:thumbTint="#8947AD"/>
+
+            <TextView
+                android:id="@+id/textViewTotalTimeSong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonShuffle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_shuffle_white"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_back_white"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonPlay"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_play_button_white"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonNext"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_next_white"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonRepeat"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_repeat_white"
+                android:background="@null"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

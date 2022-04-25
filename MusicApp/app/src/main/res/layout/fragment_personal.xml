@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/personal_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmen_library"
+            android:name="com.example.musicapp.Fragment.FragmentLibrary"
+            tools:layout="@layout/fragment_library"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_playlist"
+            android:name="com.example.musicapp.Fragment.FragmentPlaylist"
+            tools:layout="@layout/fragment_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_suggest_song"
+            android:name="com.example.musicapp.Fragment.FragmentSuggestSong"
+            tools:layout="@layout/fragment_suggest_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</ScrollView>

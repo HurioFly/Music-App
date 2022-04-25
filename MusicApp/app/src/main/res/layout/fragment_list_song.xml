@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/coordinatorlayoutlistsong"
+    android:background="@drawable/custom_background_listsong">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayoutlistsong"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="true"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingtoolbarlistsong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:title="Hai Con Thằn Lằn Con"
+            app:expandedTitleGravity="center|bottom"
+            app:expandedTitleMarginBottom="50dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarlistsong"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:id="@+id/imageviewbannersong"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:elevation="6dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="Display image for list song" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textViewButtonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/appbarlayoutlistsong"
+        app:layout_anchorGravity="center|bottom"
+        android:background="@drawable/button_purple_round_corner"
+        android:text="PHÁT TẤT CẢ"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginTop="40dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleviewlistsong"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

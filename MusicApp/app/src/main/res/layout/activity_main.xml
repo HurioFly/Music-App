@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.MainActivity"
+    android:fitsSystemWindows="true"
+    android:windowSoftInputMode="adjustPan">
+
+    <SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_corner"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@android:color/transparent"
+        android:queryHint="Tìm bài hát"
+        android:searchIcon="@drawable/ic_round_search_24"
+        android:theme="@style/AppSearchView"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/mainViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="0dp"
+        app:tabTextColor="@color/zing_black"
+        app:tabSelectedTextColor="@color/zing_purple"
+        app:tabIconTint="@drawable/item_selector"
+        android:background="@android:color/transparent"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget" />
+</LinearLayout>
